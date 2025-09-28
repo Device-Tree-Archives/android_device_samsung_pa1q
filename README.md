@@ -97,7 +97,7 @@ git clone https://github.com/SavedByLight/android_device_samsung_pa1q.git -b and
 ```
 ## Prepare
 ```bash
-export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_pa1q-eng
+export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_pa1q-ap2a-eng
 ```
 ## Repopick
 ```bash
