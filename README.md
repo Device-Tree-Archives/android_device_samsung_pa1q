@@ -83,21 +83,29 @@ Minor checks
 - [✔] Fastbootd
 
 
-## Clone manifest twrp-12.1 
+## Clone manifest twrp-14.1 
 ```bash
-repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+repo init -u https://github.com/SavedByLight/platform_manifest_twrp_aosp.git -b twrp-14.1
 ```
-## Sync manifest twrp-12.1
+## Sync manifest twrp-14.1
 ```bash
 repo sync -j$(nproc --all)
 ```
 ## Cloning the device tree
 ```bash
-git clone https://github.com/naden01/android_device_samsung_pa1q.git -b android-12.1 device/samsung/pa1q
+git clone https://github.com/SavedByLight/android_device_samsung_pa1q.git -b android-14.1 device/samsung/pa1q
 ```
-## Build
+## Prepare
 ```bash
-export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_pa1q-eng; mka vendorbootimage
+export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_pa1q-eng
+```
+## Repopick
+```bash
+repopick 7922
+```
+ ## Build
+```bash
+mka vendorbootimage
 ```
 
 
